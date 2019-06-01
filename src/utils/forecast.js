@@ -17,7 +17,8 @@ const forecast = (latitude, longitude, callback) => {
                     summary: daily.data[0].summary,
                     temperature: currently.temperature,
                     precipProbability: currently.precipProbability,
-                    forecast: daily.data[0].summary + " The temperature is " + currently.temperature + "'C with a " + currently.precipProbability + "% chance of rain."
+                    windSpeed: currently.windSpeed,
+                    forecast: daily.data[0].summary + " The temperature is " + currently.temperature + "'C with a " + currently.precipProbability + "% chance of rain. Wind speed is "+currently.windSpeed+" kmph."
                 })
             }
         }
