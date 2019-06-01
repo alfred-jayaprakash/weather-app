@@ -6,6 +6,7 @@ const forecast = require('./utils/forecast.js')
 const chalk = require('chalk')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 //Define paths for Express config
 const publicDirPath = path.join(__dirname, '../public')
@@ -90,6 +91,6 @@ app.get('*', (req, res) => {
 })
 
 //Startup the server
-app.listen(3000, () => {
-    console.log("server is up on port 3000")
+app.listen(port, () => {
+    console.log("server is up on port "+port)
 })
